@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sablon za kreiranje studenata</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>  
+           function Student(name,address,phone,course){
+           this.name = name;
+           this.address = address;
+           this.phone = phone;
+           this.course = course;
+}
+           Student.prototype.getName = function () {
+           return this.name;
+};
+           Student.prototype.getInfo = function () {
+           return "<br>" + "Name:" + this.name + "<br>" +
+           "Address:" + this.address + "<br>" +
+           "Phone:"  + this.phone + "<br>" +
+           "Course:"  + this.course + "<br>"+ "<br>"
+} ;         
+           let medicina = new Student ("Jana Kovacevic", "Vojislava Ilica 100", +38161894341 ,"Medicina");
+           let medicinaName= medicina.getName();
+           let medicinaInfo = medicina.getInfo ();
+ 
+           document.body.innerHTML += medicinaName
+           document.body.innerHTML += medicinaInfo
+
+           let rudarstvo = new Student ("Lena Dzudovic", "Ustanicka 100", +38165131121 ,"Rudarstvo");
+           let rudarstvoName= rudarstvo.getName();
+           let rudarstvoInfo = rudarstvo.getInfo ();
+ 
+           document.body.innerHTML += rudarstvoName
+           document.body.innerHTML += rudarstvoInfo
+
+           let geodezija = new Student ("Viktor Prola", "Kneza Milosa 100", +38165254465 ,"Geodezija");
+           let geodezijaName= geodezija.getName();
+           let geodezijaInfo = geodezija.getInfo ();
+ 
+           document.body.innerHTML += geodezijaName
+           document.body.innerHTML += geodezijaInfo
+    </script>
+</body>
+</html>
